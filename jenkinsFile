@@ -4,7 +4,7 @@ stages {
 stage('Checkout Codebase') { 
 steps { 
 cleanWs() 
-checkoutscm: [$class: 'GitSCM',userRemoteConfigs: [[credentialsId: 'sshkey',url:'git@github.com:wassimsne/ConsoleLuncher.git']]] } 
+checkout scm: [$class:'GitSCM',userRemoteConfigs: [[credentialsId:'sshkey',url:'git@github.com:wassimsne/ConsoleLuncher.git']]] } 
 } 
 stage('Build'){ 
 steps{ 
